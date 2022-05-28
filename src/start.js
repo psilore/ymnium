@@ -1,5 +1,6 @@
  
-require('dotenv').config()
+require('dotenv').config();
+import fetch from "cross-fetch";
 const express = require('express');
 const serverless = require("serverless-http");
 const app = express();
@@ -7,7 +8,6 @@ const fs = require('fs');
 const path = require('path');
 const xml2js = require('xml2js');
 let serverURL;
-
 fetch(".netlify/functions/api")
   .then((response) => response.json())
   .then((json) => {
