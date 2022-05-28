@@ -21,15 +21,8 @@
 
 **NOTE!** This application utilizes and consume an OMDb API endpoint.
 
-1. Apply for an API Key, link to OMDb and get a API Key, [https://www.omdbapi.com/apikey.aspx](https://www.omdbapi.com/apikey.aspx)
+Apply for an API Key, link to OMDb and get a API Key, [https://www.omdbapi.com/apikey.aspx](https://www.omdbapi.com/apikey.aspx)
 
-2. Add it to a `.env` file in your `/src` dir root
-
-`.env` Example content
-
-```dot
-OMDB_APIKEY=[Your API key]
-```
 
 ## Installation
 
