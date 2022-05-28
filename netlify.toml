@@ -7,3 +7,6 @@
 
 [functions]
   included_files = ["src/static/**"]
+
+[functions."start"]
+  included_files = ["src/static/**.xml"]
