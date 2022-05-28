@@ -1,6 +1,7 @@
  
 require('dotenv').config()
 const express = require('express');
+const serverless = require("serverless-http");
 const app = express();
 const fs = require('fs');
 const path = require('path');
@@ -93,6 +94,11 @@ app.use(express.json());
 app.use(express.urlencoded({
   extended: true
 }));
+
+app.use(`/.netlify/functions/app`, router);
+
+module.exports = app;
+module.exports.handler = serverless(app);
 
 // Maybe a endpoint? Dont know
 // GET All movies
