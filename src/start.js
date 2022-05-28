@@ -97,7 +97,7 @@ app.use(express.urlencoded({
   extended: true
 }));
 
-//app.use(`/.netlify/functions/start`, router);
+app.use(`/.netlify/functions/start`, router);
 
 module.exports = app;
 module.exports.handler = serverless(app);
