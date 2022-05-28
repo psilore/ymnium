@@ -13,7 +13,7 @@
 </p>
 
 
-## CI
+## CI/CD
 
 |Build|Stage URL|
 |:----|:----|
