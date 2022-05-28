@@ -13,7 +13,11 @@
 </p>
 
 
+## CI
 
+|Build|Stage URL|
+|:----|:----|
+|[![Netlify Status](https://api.netlify.com/api/v1/badges/2dd1fbc2-c786-4ca0-a0bc-63bc99a0d5e4/deploy-status)](https://app.netlify.com/sites/velvety-concha-b693a3/deploys)|https://6291f9e8dd6ddf0008eb7e0b--velvety-concha-b693a3.netlify.app/.netlify/functions/start|
 
 ## Prerequisites
 
@@ -21,15 +25,8 @@
 
 **NOTE!** This application utilizes and consume an OMDb API endpoint.
 
-1. Apply for an API Key, link to OMDb and get a API Key, [https://www.omdbapi.com/apikey.aspx](https://www.omdbapi.com/apikey.aspx)
+Apply for an API Key, link to OMDb and get a API Key, [https://www.omdbapi.com/apikey.aspx](https://www.omdbapi.com/apikey.aspx)
 
-2. Add it to a `.env` file in your `/src` dir root
-
-`.env` Example content
-
-```dot
-OMDB_APIKEY=[Your API key]
-```
 
 ## Installation
 
