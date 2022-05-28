@@ -26,6 +26,7 @@
   },
   "homepage": "https://gitlab.com/psilore/ymnium#readme",
   "dependencies": {
+    "aws-serverless-express": "^3.4.0",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
@@ -34,6 +35,9 @@
     "humanize-plus": "^1.8.2",
     "morgan": "^1.10.0",
     "omdbapi": "^3.0.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "^5.0.1",
     "request": "^2.88.2",
     "serverless-http": "^3.0.1",
     "vue": "^3.2.36",
@@ -50,7 +54,6 @@
     }
   },
   "devDependencies": {
-    "aws-serverless-express": "^3.4.0",
     "babel-cli": "^6.26.0",
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-preset-env": "^1.7.0",
