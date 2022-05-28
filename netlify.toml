@@ -1,5 +1,9 @@
 [build]
   functions = "functions"
 
+
 [dev]
   publish = "dist"
+
+[functions]
+  included_files = ["src/static/**"]
