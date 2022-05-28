@@ -15,9 +15,9 @@
 
 ## CI
 
-|Production|
-|:----|
-|[![Netlify Status](https://api.netlify.com/api/v1/badges/2dd1fbc2-c786-4ca0-a0bc-63bc99a0d5e4/deploy-status)](https://app.netlify.com/sites/velvety-concha-b693a3/deploys)|
+|Production|URL|
+|:----|:----|
+|[![Netlify Status](https://api.netlify.com/api/v1/badges/2dd1fbc2-c786-4ca0-a0bc-63bc99a0d5e4/deploy-status)](https://app.netlify.com/sites/velvety-concha-b693a3/deploys)|https://6291f9e8dd6ddf0008eb7e0b--velvety-concha-b693a3.netlify.app/.netlify/functions/start|
 
 ## Prerequisites
 
