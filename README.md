@@ -13,7 +13,11 @@
 </p>
 
 
+## CI
 
+|Produciton|
+|:----|
+|[![Netlify Status](https://api.netlify.com/api/v1/badges/2dd1fbc2-c786-4ca0-a0bc-63bc99a0d5e4/deploy-status)](https://app.netlify.com/sites/velvety-concha-b693a3/deploys)|
 
 ## Prerequisites
 
