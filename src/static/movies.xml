@@ -1,0 +1,102 @@
+
+<movies>
+	<movie>
+		<title>Rogue One</title>
+		<description>In a time of conflict, a group of unlikely heroes band together on a mission to steal the plans to the Death Star, the Empire's ultimate weapon of destruction.</description>
+		<length>133</length>
+		<year>2016</year>
+		<genre>Action, Adventure, Sci-Fi</genre>
+		<hasSeen>true</hasSeen>
+		<isFavourite>true</isFavourite>
+	</movie>
+	<movie>
+		<title>Escape From New York</title>
+		<description>In 1997, when the U.S. president crashes into Manhattan, now a giant maximum security prison, a convicted bank robber is sent in to rescue him.</description>
+		<length>99</length>
+		<year>1981</year>
+		<genre>Action, Adventure, Sci-Fi</genre>
+		<hasSeen>true</hasSeen>
+		<isFavourite>true</isFavourite>
+	</movie>
+	<movie>
+		<title>Fletch</title>
+		<description>Irwin M. Fletcher is a newspaper reporter being offered a large sum to off a cancerous millionaire, but is on the run, risking his job and finding clues when it's clear the man is healthy.</description>
+		<length>98</length>
+		<year>1985</year>
+		<genre>Comedy, Crime, Mystery</genre>
+		<hasSeen>true</hasSeen>
+		<isFavourite>true</isFavourite>
+	</movie>
+	<movie>
+		<title>Kokaku Kidotai</title>
+		<description>A cyborg policewoman and her partner hunt a mysterious and powerful hacker called the Puppet Master.</description>
+		<length>83</length>
+		<year>1995</year>
+		<genre>Animation, Action, Crime</genre>
+		<hasSeen>true</hasSeen>
+		<isFavourite>true</isFavourite>
+	</movie>
+	<movie>
+		<title>Deadpool</title>
+		<description>A wisecracking mercenary gets experimented on and becomes immortal but ugly, and sets out to track down the man who ruined his looks.</description>
+		<length>108</length>
+		<year>2016</year>
+		<genre>Action, Adventure, Comedy</genre>
+		<hasSeen>true</hasSeen>
+		<isFavourite>true</isFavourite>
+	</movie>
+	<movie>
+		<title>Le pacte des loups</title>
+		<description>In 18th-century France, the Chevalier de Fronsac and his Native American friend Mani are sent to the Gevaudan province at the king's behest to investigate the killings of hundreds by a mysterious beast.</description>
+		<length>142</length>
+		<year>2001</year>
+		<genre>Action, Adventure, Drama</genre>
+		<hasSeen>true</hasSeen>
+		<isFavourite>true</isFavourite>
+	</movie>
+	<movie>
+		<title>Goosebumps</title>
+		<description>A teenager teams up with the daughter of young adult horror author R.L. Stine after the writer's imaginary demons are set free on the town of Madison, Delaware.</description>
+		<length>103</length>
+		<year>2015</year>
+		<genre>Action, Adventure, Comedy</genre>
+		<hasSeen>false</hasSeen>
+		<isFavourite>true</isFavourite>
+	</movie>
+	<movie>
+		<title>The Martian</title>
+		<description>During a manned mission to Mars, Astronaut Mark Watney is presumed dead after a fierce storm and left behind by his crew. But Watney has survived and finds himself stranded and alone on the hostile planet. With only meager supplies, he must draw upon his ingenuity, wit and spirit to subsist and find a way to signal to Earth that he is alive.</description>
+		<length>144</length>
+		<year>2015</year>
+		<genre> Adventure, Drama, Sci-Fi</genre>
+		<hasSeen>true</hasSeen>
+		<isFavourite>true</isFavourite>
+	</movie>
+	<movie>
+		<title>Bridge of Spies</title>
+		<description>An American lawyer is recruited by the CIA during the Cold War to help rescue a pilot detained in the Soviet Union.</description>
+		<length>141</length>
+		<year>2015</year>
+		<genre>Biography, Drama, History</genre>
+		<hasSeen>false</hasSeen>
+		<isFavourite>true</isFavourite>
+	</movie>
+	<movie>
+		<title>Crimson Peak</title>
+		<description>In the aftermath of a family tragedy, an aspiring author is torn between love for her childhood friend and the temptation of a mysterious outsider. Trying to escape the ghosts of her past, she is swept away to a house that breathes, bleeds - and remembers.</description>
+		<length>119</length>
+		<year>2015</year>
+		<genre>Drama, Fantasy, Horror</genre>
+		<hasSeen>false</hasSeen>
+		<isFavourite>false</isFavourite>
+	</movie>
+	<movie>
+		<title>Aliens</title>
+		<description>Fifty-seven years after surviving an apocalyptic attack aboard her space vessel by merciless space creatures, Officer Ripley awakens from hyper-sleep and tries to warn anyone who will listen about the predators.</description>
+		<length>137</length>
+		<year>1986</year>
+		<genre>Action, Adventure, Sci-Fi</genre>
+		<hasSeen>true</hasSeen>
+		<isFavourite>true</isFavourite>
+	</movie>
+</movies>

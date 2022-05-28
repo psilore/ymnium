@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+
+<body>
+  <div class="modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>Edit movie details</h3>
+        <button class="close-button">
+          <div class="icon small">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" preserveAspectRatio="xMinYMin meet">
+              <circle cx="8" cy="8" r="8"/>
+            </svg>
+          </div>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/movies/update" method="POSt" id="editDetailsForm">
+          <div class="form-group">
+            <label for="formTitle">Title:</label><br>
+            <input type="text" id="formTitle" name="formTitle">
+          </div>
+          
+          <div class="form-row">
+
+            <div class="form-group quarter">
+              <label for="formLength">Minutes:</label>
+              <input type="text" id="formLength" name="formLength">
+            </div>
+            <div class="form-group quarter">
+              <label for="formYear">Year:</label>
+              <input type="text" id="formYear" name="formYear">
+            </div>
+            <div class="form-group half">
+              <label for="formGenre">Genre:</label>
+              <input type="text" id="formGenre" name="formGenre">
+            </div>
+
+          </div>
+
+          <div class="form-group">
+            <label for="formDescription">Description:</label>
+            <textarea id="formDescription" name="formDescription" rows="2" cols="50"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox">
+              <span class="checkbox-input">
+                <input type="checkbox" id="formHasSeen" name="formHasSeen"/>
+                <span class="checkbox-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      d="M1.73 12.91l6.37 6.37L22.79 4.59"
+                    />
+                  </svg>
+                </span>
+              </span>
+              <span class="checkbox-label" for="formHasSeen">Seen it</span>
+            </label>
+            <label class="checkbox">
+              <span class="checkbox-input">
+                <input type="checkbox" id="formIsFavourite" name="formIsFavourite"/>
+                <span class="checkbox-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      d="M1.73 12.91l6.37 6.37L22.79 4.59"
+                    />
+                  </svg>
+                </span>
+              </span>
+              <span class="checkbox-label" for="formIsFavourite">Favourite</span>
+            </label>
+
+          </div>
+
+        </form>
+        <div class="button-group">
+          <button type="submit" form="editDetailsForm" value="Submit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="wrapper">
+    <h1><%= title.toUpperCase() %> </h1>
+    <p class="sub"><%= description %> </p>
+
+    <% if (movies) {  %>
+        <div class="main">
+      <% for (const [key, movie] of Object.entries(movies)) { %>
+
+          <details id="<%= key %>" data-name="<%= movie.title.replace(/\s+/g, '-').toLowerCase() %>">
+            <summary>
+              <div class="cover">
+                <img src="<%= movie.poster %>" alt="">
+              </div>
+            </summary>
+            <div class="description">
+              <div class="meta">
+                <h2><%= movie.title %></h2>
+                <% if(movie.isFavourite === "false"){ %>
+                  <div class="icon medium">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" preserveAspectRatio="xMinYMin meet" aria-hidden="true" focusable="false">
+                      <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                    </svg>
+                  </div>
+                <% } else { %>
+                  <div class="icon medium">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" preserveAspectRatio="xMinYMin meet" aria-hidden="true" focusable="false">
+                      <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                    </svg>
+                  </div>
+                <% } %>
+                <% if(movie.hasSeen === "false"){ %>
+                  <div class="icon medium">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" preserveAspectRatio="xMinYMin meet" aria-hidden="true" focusable="false">
+                      <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                    </svg> 
+                  </div>
+                <% } else { %>
+                  <div class="icon medium">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" preserveAspectRatio="xMinYMin meet" aria-hidden="true" focusable="false">
+                      <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                    </svg>
+                  </div>
+                <% } %>
+                <button class="modal-button">
+                  <div class="icon medium light">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" preserveAspectRatio="xMinYMin meet" aria-hidden="true" focusable="false">
+                      <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                      <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+              <div class="meta info">
+                <p><%= movie.year %></p>
+                <div class="length">
+                  <div class="icon small light">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" preserveAspectRatio="xMinYMin meet" aria-hidden="true" focusable="false">
+                      <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                      <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                    </svg> 
+                  </div>
+                  <p><%= movie.length %> minutes</p>
+                </div>
+                <p><%= movie.genre %></p>
+              </div>
+              <p><%= movie.description %></p>
+            </div>
+          </details>
+      <% } %>
+        </div>
+    <% } else { %>
+      <h1><%= title.toUpperCase() %> - 404 Cant reach reality right now.</h1>
+      <p class="sub">Willbe back shortly, have a cookie! </p>
+      
+    <% } %>
+  </div>
+
+  <footer>A frontend assignment by <span>Erik Emmerfors</span> for Omegapoint | <img id="gitlabLogo" src="data:image/png;base64,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" alt="logo"><a href="https://gitlab.com/psilore/ymnium">https://gitlab.com/psilore/ymnium</a></footer>
+
+  <script type="text/javascript" src="../../static/script/main.js"></script>
+</body>
+</html>

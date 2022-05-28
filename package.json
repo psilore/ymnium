@@ -1,0 +1,33 @@
+{
+  "name": "ymnium",
+  "version": "1.0.0",
+  "description": "A Frontend test for Omegapoint",
+  "main": "./src/app.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/psilore/ymnium.git"
+  },
+  "keywords": [
+    "frontend"
+  ],
+  "author": "Erik Emmerfors",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/psilore/ymnium/issues"
+  },
+  "homepage": "https://gitlab.com/psilore/ymnium#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "humanize-plus": "^1.8.2",
+    "omdbapi": "^3.0.0",
+    "request": "^2.88.2",
+    "xml-js": "^1.6.11",
+    "xml2js": "^0.4.23"
+  }
+}
