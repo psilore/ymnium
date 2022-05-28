@@ -9,7 +9,7 @@
   <p align="center">By Erik Emmerfors.</p>
   <br />
   <br />
-  <img src="src/static/images/ymnium-design.jpg" alt="mockup"> 
+  <img src="src/static/images/ymnium-design.png" alt="mockup"> 
 </p>
 
 

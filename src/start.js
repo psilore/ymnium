@@ -1,21 +1,13 @@
  
-require('dotenv').config();
-import fetch from "cross-fetch";
+require('dotenv').config()
 const express = require('express');
 const serverless = require("serverless-http");
 const app = express();
 const fs = require('fs');
 const path = require('path');
 const xml2js = require('xml2js');
-let serverURL;
-fetch(".netlify/functions/api")
-  .then((response) => response.json())
-  .then((json) => {
-    serverURL = json.api;
-  });
 const port = process.env.PORT || 8080;
-//const omdb = new (require("omdbapi"))(process.env.OMDB_APIKEY);
-const omdb = new (require("omdbapi"))(serverURL);
+const omdb = new (require('omdbapi'))(process.env.OMDB_APIKEY);
 const util = require('util');
 const humanize = require('humanize-plus');
 var convert = require('xml-js');
