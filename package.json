@@ -5,6 +5,8 @@
   "main": "./src/app.js",
   "scripts": {
     "start": "node ./src/app.js",
+    "build": "npm-run-all --parallel build:**",
+    "build:functions": "netlify-lambda build functions",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,7 +29,19 @@
     "humanize-plus": "^1.8.2",
     "omdbapi": "^3.0.0",
     "request": "^2.88.2",
+    "serverless-http": "^3.0.1",
     "xml-js": "^1.6.11",
     "xml2js": "^0.4.23"
+  },
+  "proxy": {
+    "/.netlify/functions": {
+      "target": "http://localhost:9000",
+      "pathRewrite": {
+        "^/\\.netlify/functions": ""
+      }
+    }
+  },
+  "devDependencies": {
+    "netlify-lambda": "^2.0.15"
   }
 }
